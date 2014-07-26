@@ -30,7 +30,7 @@ test:
   host: localhost
 
 production:
-  adapter: postgresql
+  adapter: mysql2
   encoding: utf8
   reconnect: false
   database: schoolsonmap_prod
