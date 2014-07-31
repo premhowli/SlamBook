@@ -1,8 +1,24 @@
 body{margin:0px; padding:0px; background:#fffde4 url(/assets/bodyBg.jpg) repeat-x}
+a:hover{
+	color:#000;
+	background-color:#C6EC62;
+}
+.spacer{
+	clear:both; 
+	font-size:0px; 
+	line-height:0px;
+}
+
+
+
+
 #mainWrap{width:100%; margin:0px; padding:0px; float:left; background: url(/assets/headBg.jpg) no-repeat}
 #mainPanel{width:990px; margin:0px; padding:0px; float:left}
+p{width:123px; height:28px; margin:70px 0 0 0; padding:0 150px; line-height:10px; text-indent:-9999px;}
 #logoWrap{width:100%; margin:0px; padding:0px; float:left}
-h1{width:223px; height:48px; margin:20px 0 0 0; padding:0 110px; float:right; line-height:10px; text-indent:-9999px; background:url(/assets/logo.png) no-repeat}
+h1{width:223px; height:48px; margin:20px 0 0 0; padding:0 80px; float:right; line-height:10px; text-indent:-9999px; background:url(/assets/logo.png) no-repeat}
+h2{width:223px; height:48px; margin:20px 0 0 0; padding:0 40px; float:right; line-height:10px; text-indent:-9999px; background:url(/assets/logo.png) no-repeat}
+
 #loginPanel{width:397px; margin:28px 0 0 0; padding:0 0 0 546px; float:left}
 #loginPanel h2{width:397px; margin:0px; padding:0px; float:left; font-family:Georgia; font-size:27px; color:#497f35; line-height:31px; font-weight:normal}
 #loginPanel input{width:175px; height:18px; margin:9px 0 0 0; padding:3px 0 0 5px; float:left; font-family:Arial; font-size:10px; color:#bb9d59; line-height:14px; border:0px; background:#f9f6d4}
@@ -63,12 +79,21 @@ h1{width:223px; height:48px; margin:20px 0 0 0; padding:0 110px; float:right; li
 #rightPanel .project ul li a:hover{font-weight:bold; color:#943415}
 #rightPanel .project ul li a.bottom{width:250px; height:20px; margin:0px; padding:0 0 0 10px; float:left; font-family:Arial; font-size:12px; color:#bb9d59; line-height:18px; text-decoration:none; background:url(images/listbg.jpg) no-repeat}
 #rightPanel .project ul li a.bottom:hover{font-weight:bold; color:#943415} 
-#footPanel{width:923px; margin:0px; padding:25px 0 29px 0; float:left; background:url(images/footbg.jpg) no-repeat center top}
+#footPanel{width:778px;
+	height:207px;
+	margin:0 auto;
+	padding:31px 0 0 0;
+	
+	position:relative;}
 #footPanel .nav{width:923px; margin:0px; padding:0px; float:left}
 #footPanel .nav ul{width:375px; margin:0 auto; padding:0px; display:block}
 #footPanel .nav ul li{width:auto; margin:0px; float:left; padding:0px; display:block}
 #footPanel .nav ul li .blank{width:auto; margin:0px; padding:0 7px 0 7px; float:left; font-family:Arial; font-size:11px; font-weight:bold; color:#943415}
 #footPanel .nav ul li a{width:auto; margin:0px; float:left; padding:0px; font-family:Arial; font-size:11px; font-weight:bold; color:#943415; text-decoration:none}
+#footPanel .nav ul li a:hover{
+	color:#000;
+	background-color:#C6EC62;
+}
 #footPanel .copyright{width:923px; margin:3px 0 0 0; padding:0px; float:left; font-family:Arial; font-size:11px; color:#bb9d59; line-height:15px; text-align:center}
 #footPanel .designInfo{width:923px; margin:3px 0 0 0; padding:0px; float:left; font-family:Arial; font-size:11px; font-weight:bold; color:#bb9d59; text-align:center}
 #footPanel .designInfo a{color:#943415; text-decoration:none}
@@ -77,6 +102,10 @@ h1{width:223px; height:48px; margin:20px 0 0 0; padding:0 110px; float:right; li
 #footPanel .validation ul li{width:auto; margin:0px; padding:0px; float:left; display:block}
 #footPanel .validation ul li .blank{width:6px; height:17px; margin:0px; padding:0px; float:left}
 #footPanel .validation ul li a{width:66px; height:17px; margin:0px; padding:0px; float:left; font-family:Arial; font-size:10px; font-weight:bold; color:#943415; line-height:16px; text-align:center; text-decoration:none; background:url(images/validationBg.jpg) no-repeat}
+#footpanel ul li a:hover{
+	color:#000;
+	background-color:#C6EC62;
+}
 #menu{width:990px; margin:32px 0 0 0; padding:0px; float:left}
 #menu ul{width:450px; margin:0px; padding:0px; float:right; display:block}
 #menu ul li{width:auto; margin:0px; padding:0px; float:left; display:block}
@@ -85,6 +114,50 @@ h1{width:223px; height:48px; margin:20px 0 0 0; padding:0 110px; float:right; li
 #menu ul li a span{width:auto; height:16px; margin:0px; padding:2px 8px 0 8px; float:left; cursor:pointer}
 #menu ul li a:hover span{background:url(images/leftCurve.jpg) no-repeat left}
 #menu ul li .blank{width:1px; height:18px; margin:0px; padding:0 5px 0 5px; float:left; background:url(images/mBlank.jpg) no-repeat center top}
+#body{
+	background:url(images/body_bg_mid.gif) 0 0 repeat-y;
+	width:631px;
+	margin:0 auto;
+   	padding:50px 0px 0px 0px;
+}
+#body p.top{
+	display:block;
+	background:url(/assets/body_top_bg.gif) 0 0 no-repeat;
+	width:631px;
+	height:75px;
+	float:left;
+}
+#body p.bot{
+	display:block;
+	background:url(/assets/body_bottom_bg.gif) 0 0 no-repeat;
+	width:631px;
+	height:78px;
+	float:left;
+}
+
+#left{
+	width:414px;
+	padding:0 0 0 29px;
+	float:left;
+}
+#left h2{
+	display:block;
+	width:300px;
+	font:bold 22px/38px Georgia, "Times New Roman", Times, serif;
+	color:#694F10;
+	background-color:#F8EFD3;
+	float:left;
+}
+#left p.text1{
+	display:block;
+	width:385px;
+	font:normal 13px/18px  "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color:#63562E;
+	background-color:#F8EFD3;
+	margin:0 0 0 0;
+	padding:24px 0 0 0;
+	float:left;
+}
 
 
 

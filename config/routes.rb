@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users, path: '', path_names: {sign_in: "login", sign_out: "logout"}
 devise_scope :user do
   authenticated :user do
-    root :to => 'homes#index', as: :authenticated_root
+    root :to => 'statuses#index', as: :authenticated_root
   end
   unauthenticated :user do
     root :to => 'devise/sessions#new', as: :unauthenticated_root
@@ -11,12 +11,14 @@ end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-resources :homes do
+resources :statuses do
    collection do
-      get :new_reg
+      get :new
       get :index
     end
   end  
+
+
   # You can have the root of your site routed with "root"
   # root to: "homes#index"
 

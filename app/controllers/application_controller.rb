@@ -5,8 +5,10 @@ class ApplicationController < ActionController::Base
 layout :layout_by_resource
 
  def layout_by_resource
-    if devise_controller? && resource_name == :user
+    if devise_controller? 
       "slambook"
+    elsif resource_name == :user
+      "application"
     else
       "application"
     end
