@@ -13,7 +13,7 @@ a:hover{
 
 
 #mainWrap{width:100%; margin:0px; padding:0px; float:left; background: url(/assets/headBg.jpg) no-repeat}
-#mainPanel{width:990px; margin:0px; padding:0px; float:left}
+#mainPanel{width:100%; margin:0px; padding:0px; float:left}
 #logoWrap{width:100%; margin:0px; padding:0px; float:left}
 h1{width:223px; height:48px; margin:20px 0 0 0; padding:0 80px; float:right; line-height:10px; text-indent:-9999px; background:url(/assets/logo.png) no-repeat}
 h3{width:223px; height:48px; margin:20px 0 0 0; padding:0 40px; float:right; line-height:10px; text-indent:-9999px; background:url(/assets/logo.png) no-repeat}
@@ -105,7 +105,7 @@ h3{width:223px; height:48px; margin:20px 0 0 0; padding:0 40px; float:right; lin
 	color:#000;
 	background-color:#C6EC62;
 }
-#menu{width:990px; margin:32px 0 0 0; padding:0px; float:left}
+#menu{width:100%; margin:32px 0 0 0; padding:0px; float:left}
 #menu ul{width:450px; margin:0px; padding:0px; float:right; display:block}
 #menu ul li{width:auto; margin:0px; padding:0px; float:left; display:block}
 #menu ul li a{width:auto; height:18px; margin:0px; padding:0px; float:left; font-family:Arial; font-size:12px; color:#45ada9; line-height:13px; text-decoration:none; cursor:pointer}
@@ -119,16 +119,25 @@ h3{width:223px; height:48px; margin:20px 0 0 0; padding:0 40px; float:right; lin
 	margin:0 auto;
    	padding:50px 0px 0px 0px;
 }
+#body p{
+     color: #000000;
+     width:631px;
+     padding: 0 100px;
+}
+#body .width{
+width:400px;
+}
+
 #body p.top{
 	display:block;
-	background:url(/assets/body_top_bg.gif) 0 0 no-repeat;
+	background:url(/assets/body_top_bg1.png) 0 0 no-repeat;
 	width:631px;
 	height:75px;
 	float:left;
 }
 #body p.bot{
 	display:block;
-	background:url(/assets/body_bottom_bg.gif) 0 0 no-repeat;
+	background:url(/assets/body_bottom_bg1.png) 0 0 no-repeat;
 	width:631px;
 	height:78px;
 	float:left;
@@ -136,12 +145,12 @@ h3{width:223px; height:48px; margin:20px 0 0 0; padding:0 40px; float:right; lin
 
 #left{
 	width:414px;
-	padding:0 0 0 29px;
+	padding:0 0 0 0px;
 	float:left;
 }
 #left h2{
 	display:block;
-	width:300px;
+	width:631px;
 	font:bold 22px/38px Georgia, "Times New Roman", Times, serif;
 	color:#694F10;
 	background-color:#F8EFD3;

@@ -11,22 +11,27 @@
 
 <div id="mainPanel">
  <div id="menu">
-  <ul>
-   <li><a href="/"><span>Home</span></a></li>
-   <li><div class="blank"></div></li>
-   <li><a href="#"><span>About&nbsp;Us</span></a></li>
+  
+<ul>
+   <li><%= link_to "Home",statuses_path %></li>
+   
    <li><div class="blank"></div></li>
    <li><a href="#"><span>Support</span></a></li>
    <li><div class="blank"></div></li>
    <li><a href="#"><span>Forum</span></a></li>
    <li><div class="blank"></div></li>
    <li><a href="#"><span>Conact&nbsp;Us</span></a></li>
-   <li><div class="blank"></div></li>
+   
 <% if user_signed_in? %>
-
+   <li><div class="blank"></div></li>
+   <li><%= link_to "Profile", :controller => "statuses", 
+            :action => "profile", 
+            :id => current_user.id %></li>
+   <li><div class="blank"></div></li>
  <li><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></li>  
  </ul>
  </div>
+<p><%= link_to current_user.email, profile_statuses_path %> </p>
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
 <div id="logoWrap"><h3>SlamBook</h3></div>
@@ -43,10 +48,11 @@
 <div id="body">
 <%= form_for(@status) do |f| %>
 
- <p>   <%= f.label :post %><br>
-    <%= f.text_field :post %><br>
+ <p>   <%= f.label :"what's on your mind "%><br>
+    <%= f.text_area :post ,rows: 6,class: 'width'%><br>
     <%= f.submit %>
 </p> 
+
 <% end %>
 <p class="top"></p>
 <div id="left">

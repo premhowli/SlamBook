@@ -13,7 +13,7 @@ end
   # See how all your routes lay out with "rake routes".
 resources :statuses do
    collection do
-      get :new
+      get :profile
       get :index
     end
   end  

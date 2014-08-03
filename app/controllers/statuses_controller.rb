@@ -1,6 +1,7 @@
 class StatusesController < ApplicationController
 layout "slambook_logged"
 def index
+@datapro=User.all
 @data=Status.all
 @status = Status.new
 
@@ -15,7 +16,9 @@ def create
     
     redirect_to action: :index, notice: 'Record saved'
   end 
-
+def profile
+@datapro=User.find(params[:id])
+end
 def status_params
     params.require(:status).permit(:post, :user_id)
   end
