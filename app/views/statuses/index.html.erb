@@ -13,6 +13,11 @@
  <div id="menu">
   
 <ul>
+   <li> <%= form_tag statuses_path, :method => 'get'  do %>
+   <%= text_field_tag :search, params[:search]%>
+   <%= submit_tag "Search", :name => nil  %>
+ <% end %></li>
+   <li><div class="blank"></div></li>
    <li><%= link_to "Home",statuses_path %></li>
    
    <li><div class="blank"></div></li>
@@ -31,7 +36,9 @@
  <li><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></li>  
  </ul>
  </div>
-<p><%= link_to current_user.email, profile_statuses_path %> </p>
+<p><%= link_to current_user.email, :controller => "statuses", 
+            :action => "profile", 
+            :id => current_user.id %> </p>
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
 <div id="logoWrap"><h3>SlamBook</h3></div>
@@ -56,6 +63,10 @@
 <% end %>
 <p class="top"></p>
 <div id="left">
+
+<h2><% for user in @users %>
+  <li><%= user.email %></a></li>
+<% end if @users %></h2>
 <h2><% @data.each do |slam| %>
       <tr>
         <% if slam.user_id==current_user.id %>
