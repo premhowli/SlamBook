@@ -106,7 +106,7 @@ h3{width:223px; height:48px; margin:20px 0 0 0; padding:0 40px; float:right; lin
 	background-color:#C6EC62;
 }
 #menu{width:100%; margin:32px 0 0 0; padding:0px; float:left}
-#menu ul{width:450px; margin:0px; padding:0px; float:right; display:block}
+#menu ul{width:850px; margin:0px; padding:0px; float:right; display:block}
 #menu ul li{width:auto; margin:0px; padding:0px; float:left; display:block}
 #menu ul li a{width:auto; height:18px; margin:0px; padding:0px; float:left; font-family:Arial; font-size:12px; color:#45ada9; line-height:13px; text-decoration:none; cursor:pointer}
 #menu ul li a:hover{background:url(images/rightCurve.jpg) no-repeat right}

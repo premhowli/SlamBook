@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="/assets/styles.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="iepngfix_tilebg.js"></script> 
+<script type="text/javascript" src="iepngfix.js"></script> 
+</head>
+<body>
+
+<div id="mainPanel">
+ <div id="menu">
+  <ul>
+   <li><a href="/"><span>Home</span></a></li>
+   <li><div class="blank"></div></li>
+   <li><a href="#"><span>About&nbsp;Us</span></a></li>
+   <li><div class="blank"></div></li>
+   <li><a href="#"><span>Support</span></a></li>
+   <li><div class="blank"></div></li>
+   <li><a href="#"><span>Forum</span></a></li>
+   <li><div class="blank"></div></li>
+   <li><a href="#"><span>Conact&nbsp;Us</span></a></li>
+   <li><div class="blank"></div></li>
+<% if user_signed_in? %>
+
+ <li><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></li>  
+ </ul>
+ </div>
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+<% end %>
+
+<p>
+  <strong>Email:</strong>
+  <%= @datapro.email %>
+</p>
+
+
+
+
+</body>
+</html>
