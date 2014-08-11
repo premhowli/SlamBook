@@ -1,7 +1,6 @@
 class Status < ActiveRecord::Base
+belongs_to :user
 
-include ActiveModel::Conversion
-extend  ActiveModel::Naming
  
 
 end
