@@ -15,6 +15,7 @@ resources :statuses do
    collection do
       get :profile
       get :index
+      get :demo
     end
   end  
 

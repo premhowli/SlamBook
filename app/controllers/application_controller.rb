@@ -8,9 +8,9 @@ layout :layout_by_resource
     if devise_controller? 
       "slambook"
     elsif resource_name == :user
-      "application"
+      "slambook_logged"
     else
-      "application"
+      "slambook_logged"
     end
   end
 

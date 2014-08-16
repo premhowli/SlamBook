@@ -1,151 +1,88 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="/assets/styles.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="iepngfix_tilebg.js"></script> 
-<script type="text/javascript" src="iepngfix.js"></script> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="EN" lang="EN" dir="ltr">
+<head profile="http://gmpg.org/xfn/11">
+<title>SlamBook</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="imagetoolbar" content="no" />
+<link rel="stylesheet" href="/assets/layout.css" type="text/css" />
+<script type="text/javascript" src="scripts/jquery-1.4.1.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.nivo.slider.pack.js"></script>
+<script type="text/javascript" src="scripts/jquery.nivo.slider.setup.js"></script>
+<!--[if lt IE 8]>
+<style type="text/css" media="screen">.nivo-controlNav a{float:left;}</style>
+<![endif]-->
 </head>
-
 <body>
 
-<div id="mainPanel">
- <div id="menu">
+<!-- ####################################################################################################### -->
+
+<!-- ####################################################################################################### -->
+<div class="wrapper col3">
+  <div id="featured_intro">
+    <% for user in @usersd %>
+    <%= link_to user.name,:controller => "statuses", 
+            :action => "profile",
+	     :id => user.id%>
+    <% end if @usersd %>
+  </div>
   
-<ul>
-   <li> <%= form_tag statuses_path, :method => 'get'  do %>
-   <%= text_field_tag :search, params[:search]%>
-   <%= submit_tag "Search", :name => nil  %>
- <% end %></li>
-   <li><div class="blank"></div></li>
-   <li><%= link_to "Home",statuses_path %></li>
-   
-   <li><div class="blank"></div></li>
-   <li><a href="#"><span>Support</span></a></li>
-   <li><div class="blank"></div></li>
-   <li><a href="#"><span>Forum</span></a></li>
-   <li><div class="blank"></div></li>
-   <li><a href="#"><span>Conact&nbsp;Us</span></a></li>
-   
-<% if user_signed_in? %>
-   <li><div class="blank"></div></li>
-   <li><%= link_to "Profile", :controller => "statuses", 
-            :action => "profile", 
-            :id => current_user.id %></li>
-   <li><div class="blank"></div></li>
- <li><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></li>  
- </ul>
- </div>
-<p><%= link_to current_user.name, :controller => "statuses", 
-            :action => "profile", 
-            :id => current_user.id %> </p>
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
-<div id="logoWrap"><h3>SlamBook</h3></div>
+<div id="featured_intros">
+    <div><center>
+      <p><%= form_for(@statusd) do |f| %>
 
-
-
-
-
-
-
-
-
-
-<div id="body">
-<%= form_for(@status) do |f| %>
-
- <p>   <%= f.label :"what's on your mind "%><br>
+ <p class="mind">   <%= f.label :"what's on your mind "%><br>
     <%= f.text_area :post ,rows: 6,class: 'width'%><br>
     <%= f.submit %>
-</p> 
+</p><% end %></p></center></div>
+    </div>
 
-<% end %>
-<p class="top"></p>
-<div id="left">
-
-<h2><% for user in @users %>
-  <li><%= user.user.email %></a></li>
-<% end if @users %></h2>
-<h2><% @data.each do |slam| %>
-      <tr>
+<% @datad.each do |slam| %>
+  <div id="featured_intro"> <div>   
         <% if slam.user_id==current_user.id %>
-        <td><%= link_to slam.user.username, :controller => "statuses", 
+      <%= link_to slam.user.username, :controller => "statuses", 
             :action => "profile", 
-            :id => current_user.id %></td>
-        <td><%= slam.post %></td><br>
+            :id => current_user.id %><br>
+	<%= slam.post %><br>
         <% end %>
-      </tr>
-     <% end %></h2>
+      </div></div>
+     <% end %>
+ 
 
 
-
-<p class="text1"></p>
-</div>
-<div id="menu">
-<ul>
-<li></li>
-
-</ul>
-</div>
-<p class="bot"></p>
-<br class="spacer" />
-</div>
-<% else %>
-<div id="menu">
-<ul>
- <li><%= link_to "Sign In", new_user_session_path, :method => :get %></li>
-
-<li><%= link_to "Sign up", new_user_registration_path, :method => :get %></li>
-</ul>
-</div> 
-
-
-
-
-
-
-
-
-
-<div id="logoWrap"><h1>SlamBook</h1></div>
- <div id="loginPanel">
-  <h2>User Login</h2>
-  <input name="name" type="text" value="User Name" onfocus="if(this.value=='User Name')this.value=''" onblur="if(this.value=='')this.value='User Name'"/>
-   <div class="blank"></div>
-  <input name="name" type="text" value="Password" onfocus="if(this.value=='Password')this.value=''" onblur="if(this.value=='')this.value='Password'"/>
-  <p>Not yet a Member? <a href="/sign_up">Register Now</a></p>
-  <a href="/login" class="login">Login</a>
-
- </div>
- </div>
-
-
-<% end %> 
-
-  
-  
- <div id="footPanel">
-  <div class="nav">
-   <ul>
-    <li><a href="/">Home</a></li>
-    <li><div class="blank">|</div></li>
-    <li><a href="#">About Us</a></li>
-    <li><div class="blank">|</div></li>
-    <li><a href="#">Suppor</a></li>
-    <li><div class="blank">|</div></li>
-    <li><a href="#">Forum</a></li>
-    <li><div class="blank">|</div></li>
-    <li><a href="#">Development</a></li>
-    <li><div class="blank">|</div></li>
-    <li><a href="#">Conact Us</a></li>
-   </ul>
   </div>
-  <div class="copyright">© Copyright Infirmation Goes Here. All Rights Reserved.</div>
-  
 
- </div>
+<!-- ####################################################################################################### 
+<div class="wrapper col4">
+  <div id="latest">
+    <ul>
+      <li>
+        <h2>Indonectetus facilis leo nibh</h2>
+        <p class="imgholder"><img src="images/demo/290x100.gif" alt="" /></p>
+        <p>Nullamlacus dui ipsum conseqlo bo rttis non euisque morbipen asda pibulum orna. <a href="#">More &raquo;</a></p>
+      </li>
+      <li>
+        <h2>Indonectetus facilis leo nibh</h2>
+        <p class="imgholder"><img src="images/demo/290x100.gif" alt="" /></p>
+        <p>Nullamlacus dui ipsum conseqlo bo rttis non euisque morbipen asda pibulum orna. <a href="#">More &raquo;</a></p>
+      </li>
+      <li class="last">
+        <h2>Indonectetus facilis leo nibh</h2>
+        <p class="imgholder"><img src="images/demo/290x100.gif" alt="" /></p>
+        <p>Nullamlacus dui ipsum conseqlo bo rttis non euisque morbipen asda pibulum orna. <a href="#">More &raquo;</a></p>
+      </li>
+    </ul>
+    <br class="clear" />
+  </div>
 </div>
+ ####################################################################################################### -->
+
+<!-- ####################################################################################################### -->
+<div class="wrapper col6">
+  <div id="copyright">
+    <p class="fl_left">Copyright &copy; 2011 - All Rights Reserved - </p>
+    <p class="fl_right">Template by </p>
+    <br class="clear" />
+  </div>
 </div>
 </body>
 </html>

@@ -1,9 +1,13 @@
 class StatusesController < ApplicationController
 layout "slambook_logged"
 def index
- @users = User.search(params[:search], params[:id])
-@data=Status.all
-@status = Status.new
+ if params[:search].present?
+    @usersd = User.search(params)
+  else
+    
+  end
+@datad=Status.all
+@statusd = Status.new
 
 end
 def new 
@@ -16,6 +20,15 @@ def create
     
     redirect_to action: :index, notice: 'Record saved'
   end 
+def demo
+ if params[:search].present?
+    @users = User.search(params)
+  else
+    
+  end
+@data=Status.all
+@status = Status.new
+end
 def profile
 @datap=User.find(params[:id])
 end
