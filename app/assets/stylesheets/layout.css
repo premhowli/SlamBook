@@ -18,7 +18,7 @@ body{
 	margin:0;
 	padding:0;
 height:100%;
-	font-size:13px;
+	
 	font-family:Georgia, "Times New Roman", Times, serif;
 	color:#605B5B;
 	
@@ -148,12 +148,16 @@ position:relative;
 
 #topbar #search{
 	display:block;
-	float:right;
+	float:left;
 	
 	margin:0;
 	padding:0;
 	overflow:hidden;
 	}
+#search p{
+color:#FFFFFF;
+line-height:0px;
+}
 
 /* ----------------------------------------------Topnav-------------------------------------*/
 
@@ -262,11 +266,26 @@ width:80%;
 }
 #featured_intro div{
 	padding:10px 15px;
+	margin:0 auto;
+	}
+#featured_intro pro{
+	font-size:30px;
 	}
 
 #featured_intro div p{
 	margin:0;
 	padding:0;
+	font-size:20px;
+	line-height:2em;
+	}
+#featured_intro div p.pro{
+	
+	font-size:25px;
+	line-height:2em;
+	}
+#featured_intro div p.proa{
+	background:url(/assets/phn.png) 0 0 no-repeat;
+	font-size:25px;
 	line-height:2em;
 	}
 #featured_intros{
@@ -275,10 +294,12 @@ width:80%;
 	
 	}
 #featured_intros .width{
-width:80%;
+width:60%;
+font-size:20px;
 }
 #featured_intros div{
 	padding:10px 15px;
+	
 	}
 
 #featured_intros div p,#featured_intros div p mind{

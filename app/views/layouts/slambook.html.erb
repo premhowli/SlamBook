@@ -3,28 +3,42 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>SlamBook</title>
-<link href="/assets/styles.css" rel="stylesheet" type="text/css" />
+<link href="/assets/layout.css" rel="stylesheet" type="text/css" />
 <link rel="icon" href="/assets/icon.ico" /> 
 <script type="text/javascript" src="iepngfix_tilebg.js"></script> 
 <script type="text/javascript" src="iepngfix.js"></script> 
 </head>
 
 <body>
-<div id="mainWrap">
-<div id="mainPanel">
- <div id="menu">
-  <ul>
-   <li><a href="/"><span>Home</span></a></li>
-   <li><div class="blank"></div></li>
-   <li><a href="#"><span>About&nbsp;Us</span></a></li>
-   <li><div class="blank"></div></li>
-   <li><a href="#"><span>Support</span></a></li>
-   <li><div class="blank"></div></li>
-   <li><a href="#"><span>Forum</span></a></li>
-   <li><div class="blank"></div></li>
-   <li><a href="#"><span>Conact&nbsp;Us</span></a></li>
-   <li><div class="blank"></div></li>
-</ul>
+<div class="wrapper col2">
+  <div id="topbar">
+    <div id="topnav">
+      <ul>
+		        
+		<li class="active"><%= link_to "Home",new_user_session_path %></li>
+        	<% if user_signed_in? %>
+   		<li><div class="blank"></div></li>
+   		<li><%= link_to "Profile", :controller => "statuses", 
+            	:action => "profile", 
+            	:id => current_user.id %></li>
+   		<li><div class="blank"></div></li>
+ 		<li><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></li> 		
+		<% end %>
+        	<li><a href="#">DropDown</a>
+          	<ul>
+            		<li><a href="#">Link 1</a></li>
+            		<li><a href="#">Link 2</a></li>
+            		<li><a href="#">Link 3</a></li>
+          	</ul>
+       		</li>
+        
+      		</ul>
+</div>
+    <div id="search">
+      <p>Sign In to open your SlamBook....</p>
+    </div>
+    <br class="clear" />
+  </div>
 </div>
   <%= yield %>
 </body>

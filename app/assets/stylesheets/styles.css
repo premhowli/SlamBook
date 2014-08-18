@@ -13,8 +13,8 @@ a:hover{
 
 
 #mainWrap{width:100%; margin:0px; padding:0px; float:left; background: url(/assets/headBg.jpg) no-repeat}
-#mainPanel{width:100%; margin:0px; padding:0px; float:left}
-#logoWrap{width:100%; margin:0px; padding:0px; float:left}
+#mainPanel{width:100%; margin:0px; padding:0px; float:left:}
+#logoWrap{width:100%; margin:0px; padding:0px; float:left; margin-top:150px;}
 h1{width:223px; height:48px; margin:20px 0 0 0; padding:0 80px; float:right; line-height:10px; text-indent:-9999px; background:url(/assets/logo.png) no-repeat}
 h3{width:223px; height:48px; margin:20px 0 0 0; padding:0 40px; float:right; line-height:10px; text-indent:-9999px; background:url(/assets/logo.png) no-repeat}
 
@@ -26,7 +26,7 @@ h3{width:223px; height:48px; margin:20px 0 0 0; padding:0 40px; float:right; lin
 #loginPanel input[type="checkbox"]{width:25px; height:18px; margin:9px 0 0 0; padding:3px 0 0 5px; float:left; font-family:Arial; font-size:10px; color:#bb9d59; line-height:14px; border:0px;}
 #loginPanel .blank{width:25px; height:21px; margin:0px; padding:0px; float:left}
 #loginPanel p{width:253px; margin:0px 0 0 0; padding:0px; float:left; font-family:Arial; font-size:16px; color:#ab8e4e; line-height:20px}
-#loginPanel p a{color:#943415; text-decoration:none}
+#loginPanel p a{color:#000055; text-decoration:none}
 #loginPanel .login{width:66px; height:20px; margin:10px 0 0 0; padding:0px; float:left; font-family:Arial; font-size:11px; color:#943415; line-height:20px; text-align:center; text-decoration:none; background:url(/assets/loginBg.jpg) no-repeat}
 #quots{width:990px; margin:145px 0 0 0; padding:0px; float:left}
 #quots p{margin:0px; font-family:Georgia; font-size:28px; color:#497f35; line-height:32px; text-align:center; text-indent:50px}

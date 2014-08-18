@@ -43,7 +43,7 @@
     </div>
     <div id="search">
       <%= form_tag statuses_path, :method => 'get'  do %>
-   <%= text_field_tag :search, params[:search]%>
+   <%= text_field_tag :search, params[:search], :placeholder => 'Search for people'%>
    <%= submit_tag "Search", :name => nil  %>
  <% end %>
     </div>
