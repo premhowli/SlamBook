@@ -20,12 +20,12 @@
 <div class="wrapper col3">
   <div id="featured_intro">
 <div><center>
-<%= link_to @datap.name,:controller => "statuses", 
+<%= link_to @datap.fname,:controller => "statuses", 
             :action => "profile",
 	     :id => @datap.id%><br></center> 
- 
+ <p class="pro"><%= @datap.fname %>   <%= @datap.lname %></p>
 <p class="pro"><%= image_tag("mail.png", :alt => "") %><%= @datap.email %></p>
-<p class="pro"><%= image_tag("phn.png", :alt => "") %><%= @datap.name %></p>
+<p class="pro"><%= image_tag("phn.png", :alt => "") %><%= @datap.fname %></p>
   </div></div>
   
 

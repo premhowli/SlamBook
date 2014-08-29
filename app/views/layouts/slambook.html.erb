@@ -18,10 +18,7 @@
 		<li class="active"><%= link_to "Home",new_user_session_path %></li>
         	<% if user_signed_in? %>
    		<li><div class="blank"></div></li>
-   		<li><%= link_to "Profile", :controller => "statuses", 
-            	:action => "profile", 
-            	:id => current_user.id %></li>
-   		<li><div class="blank"></div></li>
+   				<li><div class="blank"></div></li>
  		<li><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></li> 		
 		<% end %>
         	<li><a href="#">DropDown</a>

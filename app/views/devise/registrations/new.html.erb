@@ -28,12 +28,14 @@
   <div><%= f.label :password_confirmation %><br />
   <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
 <div class="blank"></div>
-  <div><%= f.label :name %><br />
-  <%= f.text_field :name %></div>
+  <div><%= f.label :fame %><br />
+  <%= f.text_field :fname %>
+<%= f.label :lname %><br />
+  <%= f.text_field :lname %></div>
 <div class="blank"></div>
   <div><%= f.label :sex %><br />
-  <%= f.text_field :sex %></div>  
-<div class="blank"></div>
+  <%= f.select :sex, options_for_select([['Male'], ['Female']], :selected => :sex, :prompt => "select one") %></div>  
+<div class="blank"></div><div class="blank"></div><div class="blank"></div><div class="blank"></div><div class="blank"></div><div class="blank"></div><div class="blank"></div><div class="blank"></div><div class="blank"></div>
    <div><%= f.submit "Sign up" %></div>
 <div class="blank"></div>
 <% end %>

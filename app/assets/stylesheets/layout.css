@@ -42,6 +42,30 @@ a{font-size:30px; outline:none; text-decoration:none; color:#FF9900; }
 .imgl{float:left; margin:0 8px 8px 0; clear:left;}
 .imgr{float:right; margin:0 0 8px 8px; clear:right;}
 
+
+
+#logoWrap{width:100%; margin:0px; padding:0px; float:left; margin-top:150px;}
+h1{width:223px; height:48px; margin:20px 0 0 0; padding:0 80px; float:right; line-height:10px; text-indent:-9999px; background:url(/assets/logo.png) no-repeat}
+h3{width:223px; height:48px; margin:20px 0 0 0; padding:0 40px; float:right; line-height:10px; text-indent:-9999px; background:url(/assets/logo.png) no-repeat}
+
+#loginPanel{width:397px; margin:28px 0 0 0; padding:0 0 0 546px; float:left}
+#loginPanel h2{width:397px; margin:0px; padding:0px; float:left; font-family:Georgia; font-size:27px; color:#497f35; line-height:31px; font-weight:normal}
+#loginPanel input{width:175px; height:18px; margin:9px 0 0 0; padding:3px 0 0 5px; float:left; font-family:Arial; font-size:10px; color:#bb9d59; line-height:14px; border:0px; background:#f9f6d4}
+#loginPanel .select{width:175px; height:18px; margin:9px 0 0 0; padding:3px 0 0 5px; float:left; font-family:Arial; font-size:15px; color:#bb9d59; line-height:14px; border:0px;}
+select{
+ margin:9px 0 0 0; padding:3px 0 0 5px; float:left; font-family:Arial; font-size:15px; line-height:14px;}
+
+#loginPanel label{width:175px; height:18px; margin:9px 0 0 0; padding:3px 0 0 5px; float:left; font-family:Arial; font-size:15px; color:#bb9d59; line-height:14px; border:0px;}
+#loginPanel input[type="submit"]{width:66px; height:20px; margin:0px 0 0 0; padding:0px; float:left; font-family:Arial; font-size:11px; color:#bb9d59; line-height:20px; background:url(/assets/loginBg.jpg) no-repeat}
+#loginPanel input[type="checkbox"]{width:25px; height:18px; margin:9px 0 0 0; padding:3px 0 0 5px; float:left; font-family:Arial; font-size:10px; color:#bb9d59; line-height:14px; border:0px;}
+#loginPanel .blank{width:25px; height:21px; margin:0px; padding:0px; float:left;}
+#loginPanel p{width:453px; margin:0px;  float:left; font-family:Arial; height:40px; font-size:16px; color:#ab8e4e; line-height:40px}
+#loginPanel p a{color:#000055; text-decoration:none; margin:10px;}
+#loginPanel .login{width:66px; height:20px; margin:10px 0 0 0; padding:0px; float:left; font-family:Arial; font-size:11px; color:#943415; line-height:20px; text-align:center; text-decoration:none; background:url(/assets/loginBg.jpg) no-repeat;}
+#loginPanel .submit{ margin:30px 0 0 0; padding:0px; float:left; font-family:Arial; font-size:11px; color:#943415; line-height:20px; text-align:center; text-decoration:none; background:#000055;}
+
+
+
 /* ----------------------------------------------Wrapper-------------------------------------*/
 
 div.wrapper{
@@ -52,10 +76,11 @@ div.wrapper{
 	}
 
 div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, div.wrapper h6{
-	margin:0 0 0px 0;
+	margin:0 auto -50px;
 	padding:0;
 	font-size:20px;
 	font-weight:normal;
+	
 	line-height:normal;
 	}
 
@@ -64,7 +89,7 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 .col3{color:#666666; padding:50px 0;}
 .col4{color:#666666; background-color:#FFFFFF; border-top:1px solid #D5D5D5; border-bottom:1px solid #D5D5D5;}
 
-.col6, .col6 a{color:#605B5B; background-color:#D0D0D0; margin:0 auto; height:50px; display:block;
+.col6, .col6 a{color:#605B5B; background-color:#D0D0D0;  height:50px; display:block;
 	position:relative;
 bottom:5px;
 width:100%;}
@@ -158,6 +183,11 @@ position:relative;
 color:#FFFFFF;
 line-height:0px;
 }
+
+
+#invitepanel{width:397px; margin:28px 0 0 0; padding:0 0 0 546px; float:left;}
+
+
 
 /* ----------------------------------------------Topnav-------------------------------------*/
 
@@ -279,10 +309,11 @@ width:80%;
 	line-height:2em;
 	}
 #featured_intro div p.pro{
-	
+	width:30%;
 	font-size:25px;
 	line-height:2em;
 	}
+#featured_intro div p.blank{width:50px; height:10px; margin:0px; padding:0px; float:left;}
 #featured_intro div p.proa{
 	background:url(/assets/phn.png) 0 0 no-repeat;
 	font-size:25px;

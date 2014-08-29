@@ -3,9 +3,11 @@ layout "slambook_logged"
 def index
  if params[:search].present?
     @usersd = User.search(params)
-  else
+  @is_connect= Slamrequest.where(from_user_id: current_user.id,to_user_id: params)
+else
     
   end
+@is_connected= Slamrequest.where(from_user_id: current_user.id)
 @datad=Status.all
 @statusd = Status.new
 

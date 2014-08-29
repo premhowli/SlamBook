@@ -20,10 +20,15 @@
 <div class="wrapper col3">
   <div id="featured_intro">
     <% for user in @usersd %>
-    <%= link_to user.name,:controller => "statuses", 
+    <%= link_to user.fname,:controller => "statuses", 
             :action => "profile",
 	     :id => user.id%>
-    <% end if @usersd %>
+<%= link_to user.id %>
+<%= link_to current_user.id %>
+<% if @is_connect %>
+    <%= link_to "connect", :controller => "slamrequests", :action => "index", :id => user.id %>
+  <% end %>
+<% end if @usersd %>
   </div>
   
 <div id="featured_intros">
@@ -36,16 +41,30 @@
 </p><% end %></p></center></div>
     </div>
 
+<% @is_connected.each_with_index do |f, index| %>
+	
+<% Status.where(user_id: f.to_user_id).each do |s| %>
+		<div id="featured_intro"> <div>		
+		
+<%= link_to User.find(f.to_user_id).fname, :controller => "statuses", 
+            		:action => "profile", 
+            		:id => f.to_user_id %><br>
+		<%= s.post %><br>
+</div></div>
+<% end %>
+
+ <% end %> 
 <% @datad.each do |slam| %>
-  <div id="featured_intro"> <div>   
-        <% if slam.user_id==current_user.id %>
+<% if slam.user_id==current_user.id %>  
+<div id="featured_intro"> <div>   
       <%= link_to slam.user.username, :controller => "statuses", 
             :action => "profile", 
             :id => current_user.id %><br>
 	<%= slam.post %><br>
-        <% end %>
-      </div></div>
-     <% end %>
+</div></div>
+     
+      
+      <% end %><% end %>
  
 
 

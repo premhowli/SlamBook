@@ -19,7 +19,7 @@
   <div id="topbar">
     <div id="topnav">
       <ul>
-		<li><%= link_to current_user.name, :controller => "statuses", 
+		<li><%= link_to current_user.fname, :controller => "statuses", 
             	:action => "profile", 
             	:id => current_user.id %></li>        
 		<li class="active"><%= link_to "Home",statuses_path %></li>

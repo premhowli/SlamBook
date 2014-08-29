@@ -21,13 +21,18 @@ h3{width:223px; height:48px; margin:20px 0 0 0; padding:0 40px; float:right; lin
 #loginPanel{width:397px; margin:28px 0 0 0; padding:0 0 0 546px; float:left}
 #loginPanel h2{width:397px; margin:0px; padding:0px; float:left; font-family:Georgia; font-size:27px; color:#497f35; line-height:31px; font-weight:normal}
 #loginPanel input{width:175px; height:18px; margin:9px 0 0 0; padding:3px 0 0 5px; float:left; font-family:Arial; font-size:10px; color:#bb9d59; line-height:14px; border:0px; background:#f9f6d4}
+#loginPanel .select{width:175px; height:18px; margin:9px 0 0 0; padding:3px 0 0 5px; float:left; font-family:Arial; font-size:15px; color:#bb9d59; line-height:14px; border:0px;}
+select{
+ margin:9px 0 0 0; padding:3px 0 0 5px; float:left; font-family:Arial; font-size:15px; line-height:14px;}
+
 #loginPanel label{width:175px; height:18px; margin:9px 0 0 0; padding:3px 0 0 5px; float:left; font-family:Arial; font-size:15px; color:#bb9d59; line-height:14px; border:0px;}
 #loginPanel input[type="submit"]{width:66px; height:20px; margin:0px 0 0 0; padding:0px; float:left; font-family:Arial; font-size:11px; color:#bb9d59; line-height:20px; background:url(/assets/loginBg.jpg) no-repeat}
 #loginPanel input[type="checkbox"]{width:25px; height:18px; margin:9px 0 0 0; padding:3px 0 0 5px; float:left; font-family:Arial; font-size:10px; color:#bb9d59; line-height:14px; border:0px;}
 #loginPanel .blank{width:25px; height:21px; margin:0px; padding:0px; float:left}
 #loginPanel p{width:253px; margin:0px 0 0 0; padding:0px; float:left; font-family:Arial; font-size:16px; color:#ab8e4e; line-height:20px}
 #loginPanel p a{color:#000055; text-decoration:none}
-#loginPanel .login{width:66px; height:20px; margin:10px 0 0 0; padding:0px; float:left; font-family:Arial; font-size:11px; color:#943415; line-height:20px; text-align:center; text-decoration:none; background:url(/assets/loginBg.jpg) no-repeat}
+#loginPanel .login{width:66px; height:20px; margin:10px 0 0 0; padding:0px; float:left; font-family:Arial; font-size:11px; color:#943415; line-height:20px; text-align:center; text-decoration:none; background:url(/assets/loginBg.jpg) no-repeat;}
+#loginPanel .submit{ margin:30px 0 0 0; padding:0px; float:left; font-family:Arial; font-size:11px; color:#943415; line-height:20px; text-align:center; text-decoration:none; background:#000055;}
 #quots{width:990px; margin:145px 0 0 0; padding:0px; float:left}
 #quots p{margin:0px; font-family:Georgia; font-size:28px; color:#497f35; line-height:32px; text-align:center; text-indent:50px}
 #leftPanel{width:637px; margin:27px 0 0 0; padding:0 0 0 35px; float:left}
