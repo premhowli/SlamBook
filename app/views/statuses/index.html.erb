@@ -23,10 +23,11 @@
     <%= link_to user.fname,:controller => "statuses", 
             :action => "profile",
 	     :id => user.id%>
-<%= link_to user.id %>
-<%= link_to current_user.id %>
-<% if @is_connect %>
-    <%= link_to "connect", :controller => "slamrequests", :action => "index", :id => user.id %>
+
+<% if Slamrequest.where(from_user_id: current_user.id,to_user_id: user.id).blank? %>
+<%= link_to "connect", :controller => "slamrequests", :action => "index", :id => user.id %></br>
+<% else %>
+    
   <% end %>
 <% end if @usersd %>
   </div>
