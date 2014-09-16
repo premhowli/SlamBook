@@ -19,8 +19,13 @@ layout :layout_by_resource
 
   protected
 
+
+
+
   def configure_permitted_parameters
-    devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:username, :email, :password, :password_confirmation, :fname, :lname, :sex) }
+    devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:username, :email, :password, :password_confirmation, :fname, :lname,
+ :sex, :reset_password_token, :reset_password_sent_at, :remember_created_at, :current_sign_in_ip, :last_sign_in_ip,
+ :confirmation_token, :confirmed_at, :confirmation_sent_at, :unconfirmed_email) }
   end
 
 

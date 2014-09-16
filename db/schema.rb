@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140821152159) do
+ActiveRecord::Schema.define(version: 20140914094328) do
 
   create_table "peoples", force: true do |t|
     t.string   "name",       default: "", null: false
@@ -55,8 +55,13 @@ ActiveRecord::Schema.define(version: 20140821152159) do
     t.string   "sex"
     t.string   "fname"
     t.string   "lname"
+    t.string   "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.string   "unconfirmed_email"
   end
 
+  add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
