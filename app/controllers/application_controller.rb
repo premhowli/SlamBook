@@ -8,12 +8,25 @@ layout :layout_by_resource
     if devise_controller? 
       "slambook"
     elsif resource_name == :user
-      "application"
+      "slambook_logged"
     else
-      "application"
+      "slambook_logged"
     end
   end
 
+ 
+ before_filter :configure_permitted_parameters, if: :devise_controller?
+
+  protected
+
+
+
+
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:username, :email, :password, :password_confirmation, :fname, :lname,
+ :sex, :reset_password_token, :reset_password_sent_at, :remember_created_at, :current_sign_in_ip, :last_sign_in_ip,
+ :confirmation_token, :confirmed_at, :confirmation_sent_at, :unconfirmed_email) }
+  end
 
 
 end

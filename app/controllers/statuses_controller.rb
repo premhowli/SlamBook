@@ -1,9 +1,15 @@
 class StatusesController < ApplicationController
 layout "slambook_logged"
 def index
-@datapro=User.all
-@data=Status.all
-@status = Status.new
+ if params[:search].present?
+    @usersd = User.search(params)
+  @is_connect= Slamrequest.where(from_user_id: current_user.id,to_user_id: params)
+else
+    
+  end
+@is_connected= Slamrequest.where(from_user_id: current_user.id)
+@datad=Status.all
+@statusd = Status.new
 
 end
 def new 
@@ -16,8 +22,17 @@ def create
     
     redirect_to action: :index, notice: 'Record saved'
   end 
+def demo
+ if params[:search].present?
+    @users = User.search(params)
+  else
+    
+  end
+@data=Status.all
+@status = Status.new
+end
 def profile
-@datapro=User.find(params[:id])
+@datap=User.find(params[:id])
 end
 def status_params
     params.require(:status).permit(:post, :user_id)

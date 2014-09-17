@@ -1,7 +1,6 @@
 class Status < ActiveRecord::Base
-
-include ActiveModel::Conversion
-extend  ActiveModel::Naming
+belongs_to :user
+has_many :slamrequest
  
 
 end

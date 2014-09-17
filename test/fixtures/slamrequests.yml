@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: 
+  reqfrom: MyString
+  reqto: MyString
+  reqtype: MyString
+
+two:
+  type: 
+  reqfrom: MyString
+  reqto: MyString
+  reqtype: MyString
